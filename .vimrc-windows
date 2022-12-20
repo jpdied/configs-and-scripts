@@ -1,0 +1,105 @@
+set nocompatible
+set ls=2
+set tabstop=2
+set shiftwidth=2
+set scrolloff=3
+"set cindent
+set smartindent
+set autoindent
+set expandtab
+set autowrite
+set showcmd
+set hlsearch
+set incsearch
+set ruler
+set visualbell t_vb=
+set novisualbell
+set number
+set ignorecase
+set title
+set ttyfast
+set modeline
+set modelines=3
+set shortmess=atI
+set nostartofline
+set whichwrap=b,s,h,l,<,>,[,]
+set showtabline=2
+set mouse=a
+set backspace=eol,start,indent
+set tags=./tags
+set formatoptions=1
+set lbr
+set clipboard=unnamed
+set foldmethod=marker
+set printoptions=syntax:n
+set lines=40
+set columns=120
+set guifont=Courier_New:h10
+set guifontwide=MS_Mincho
+"colorscheme evening
+
+" Privacy Settings
+set noswapfile
+set nobackup
+set nowritebackup
+set bufhidden=wipe
+set viminfo='20,\"0,@0,:0,n%HOME%/_vim/_viminfo
+"set viminfo=
+
+syntax on
+
+" Unicode stuff
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8 bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
+
+" Keyboard mappings
+map <F3> :tabnext<CR> 
+map <F2> :tabprev<CR>
+map <F4> :tabnew<CR>
+map <F5> :tabm<CR>
+map <F6> :w<CR>:tabclose<CR>
+map <F7> :vsplit<CR>
+map <F8> :setlocal spell spelllang=en_us<CR>
+map <F12> :%s/\r//g<CR>
+map <silent> <C-N> :silent noh<CR>
+
+" Keyboard mapping for numeric keypad
+imap <Esc>OM <c-m>
+ map <Esc>OM <c-m>
+imap <Esc>OP <nop>
+ map <Esc>OP <nop>
+imap <Esc>OQ /
+ map <Esc>OQ /
+imap <Esc>OR *
+ map <Esc>OR *
+imap <Esc>OS -
+ map <Esc>OS -
+
+imap <Esc>Ol +
+imap <Esc>Om -
+imap <Esc>On ,
+imap <Esc>Op 0
+imap <Esc>Oq 1
+imap <Esc>Or 2
+imap <Esc>Os 3
+imap <Esc>Ot 4
+imap <Esc>Ou 5
+imap <Esc>Ov 6
+imap <Esc>Ow 7
+imap <Esc>Ox 8
+imap <Esc>Oy 9
+imap <Esc>Oz 0
+
+ab #d #define
+ab #i #include
+ab #b /************************************************
+ab #e ************************************************/
+ab #l /*----------------------------------------------*/
+ab #g# $_GET[
+ab #p# $_POST[
