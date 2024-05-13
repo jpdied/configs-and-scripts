@@ -1,0 +1,135 @@
+Windows Registry Editor Version 5.00
+
+; Terminal
+
+[HKEY_CLASSES_ROOT\Directory\shell\01WinTerm]
+"MUIVerb"="Windows Terminal"
+"Icon"="%WINDIR%\\winTerminal.ico"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\WinTermCmd"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\01WinTerm]
+"MUIVerb"="Windows Terminal"
+"Icon"="%WINDIR%\\winTerminal.ico"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\WinTermCmd"
+
+; Default Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\00default]
+"MUIVerb"="Default"
+"Icon"="%WINDIR%\\winTerminal.ico"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\00default\command]
+@="wt.exe nt -d \"%v\""
+
+; Windows PowerShell Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\01WinPS]
+"MUIVerb"="Windows PowerShell"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\01WinPS\command]
+@="wt.exe nt --profile \"Windows PowerShell\" -d \"%v\""
+
+; cmd Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\02Command]
+"MUIVerb"="Command Prompt"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\02Command\command]
+@="wt.exe nt --profile \"Command Prompt\" -d \"%v\""
+
+; Git Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\03Git]
+"MUIVerb"="Git Bash"
+"Icon"="C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\03Git\command]
+@="wt.exe nt --profile \"Git Bash\" -d \"%v\""
+
+; AlmaLinux Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\04AlmaLinuxOS9]
+"MUIVerb"="AlmaLinuxOS-9"
+"Icon"="%WINDIR%\\AlmaLinux9.ico"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\04AlmaLinuxOS9\command]
+@="wt.exe nt --profile \"AlmaLinuxOS-9\" -d \"%v\""
+
+; Powershell Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\05PowerShell]
+"MUIVerb"="PowerShell"
+"Icon"="pwsh.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\05PowerShell\command]
+@="wt.exe nt --profile \"PowerShell\" -d \"%v\""
+
+
+; Terminal (Elevated)
+
+[HKEY_CLASSES_ROOT\Directory\shell\02WinTermAdmin]
+"MUIVerb"="Windows Terminal (Elevated)"
+"Icon"="%WINDIR%\\winTerminal.ico"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\WinTermAdminCmd"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\02WinTermAdmin]
+"MUIVerb"="Windows Terminal (Elevated)"
+"Icon"="%WINDIR%\\winTerminal.ico"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\WinTermAdminCmd"
+"HasLUAShield"=""
+
+; Default Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\00default]
+"MUIVerb"="Default"
+"Icon"="%WINDIR%\\winTerminal.ico"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\00default\command]
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt -d \\\"%v\\\"' -Verb runAs\""
+
+; Windows PowerShell Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\01WinPS]
+"MUIVerb"="Windows PowerShell"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\01WinPS\command]
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"Windows PowerShell\\\" -d \\\"%v\\\"' -Verb runAs\""
+
+; cmd Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\02Command]
+"MUIVerb"="Command Prompt"
+"Icon"="cmd.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\02Command\command]
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"Command Prompt\\\" -d \\\"%v\\\"' -Verb runAs\""
+
+; Git Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\03Git]
+"MUIVerb"="Git Bash"
+"Icon"="C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\03Git\command]
+@="wt.exe nt --profile \"Git Bash\" -d \"%v\""
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"Git Bash\\\" -d \\\"%v\\\"' -Verb runAs\""
+
+; AlmaLinux Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\04AlmaLinuxOS9]
+"MUIVerb"="AlmaLinuxOS-9"
+"Icon"="%WINDIR%\\AlmaLinux9.ico"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\04AlmaLinuxOS9\command]
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"AlmaLinuxOS-9\\\" -d \\\"%v\\\"' -Verb runAs\""
+
+; Powershell Profile
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\05PowerShell]
+"MUIVerb"="PowerShell"
+"Icon"="pwsh.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\05PowerShell\command]
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"PowerShell\\\" -d \\\"%v\\\"' -Verb runAs\""
+
+; This is now redudant so we disable the built in Windows Terminal Context Menu
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{9F156763-7844-4DC4-B2B1-901F640F5155}"=""
