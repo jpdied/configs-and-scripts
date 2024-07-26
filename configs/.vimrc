@@ -14,6 +14,7 @@ set expandtab
   "set viminfo=
   "set viminfo='20,\"0,@0,:0,n~/.viminfo
   set bufhidden=wipe
+  set hlsearch
   if has("mouse")
     set mouse=a
   endif
