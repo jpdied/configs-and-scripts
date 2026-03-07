@@ -45,12 +45,12 @@ Windows Registry Editor Version 5.00
 @="wt.exe nt --profile \"Git Bash\" -d \"%v\""
 
 ; AlmaLinux Profile
-[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\04AlmaLinuxOS9]
-"MUIVerb"="AlmaLinuxOS-9"
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\04AlmaLinuxOS10]
+"MUIVerb"="AlmaLinuxOS-10"
 "Icon"="%WINDIR%\\AlmaLinux9.ico"
 
-[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\04AlmaLinuxOS9\command]
-@="wt.exe nt --profile \"AlmaLinuxOS-9\" -d \"%v\""
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\04AlmaLinuxOS10\command]
+@="wt.exe nt --profile \"AlmaLinuxOS-10\" -d \"%v\""
 
 ; Powershell Profile
 [HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermCmd\shell\05PowerShell]
@@ -113,13 +113,13 @@ Windows Registry Editor Version 5.00
 @="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"Git Bash\\\" -d \\\"%v\\\"' -Verb runAs\""
 
 ; AlmaLinux Profile
-[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\04AlmaLinuxOS9]
-"MUIVerb"="AlmaLinuxOS-9"
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\04AlmaLinuxOS10]
+"MUIVerb"="AlmaLinuxOS-10"
 "Icon"="%WINDIR%\\AlmaLinux9.ico"
 "HasLUAShield"=""
 
-[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\04AlmaLinuxOS9\command]
-@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"AlmaLinuxOS-9\\\" -d \\\"%v\\\"' -Verb runAs\""
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\04AlmaLinuxOS10\command]
+@="powershell -windowstyle hidden -command \"Start-Process wt.exe -ArgumentList 'nt --profile \\\"AlmaLinuxOS-10\\\" -d \\\"%v\\\"' -Verb runAs\""
 
 ; Powershell Profile
 [HKEY_CLASSES_ROOT\Directory\ContextMenus\WinTermAdminCmd\shell\05PowerShell]
